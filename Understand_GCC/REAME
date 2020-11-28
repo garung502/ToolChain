@@ -1,0 +1,13 @@
+UNDERSTAND gcc action:
+- Preprocessing:
+    gcc -E -o ex1_expect.c ex1.c
+===> Create ex1_expect.c file. The output is in the form of preprocessed source code,which is sent to the standard output
+- Compilation:
+    gcc -S ex1_expect.c
+===> Create ex1_expect.s file. The output is in the form of an assembler code file for each non-assembler input file specified
+- Assembly:
+    gcc -c ex1_expect.s
+==> Create ex1_expect.o file. This is object file
+-Linking:
+==>gcc -o ex1 ex1_expect.o
+==> Create ex1 file. This is run file
